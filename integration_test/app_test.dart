@@ -7,7 +7,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets(
-      "Not inputtinga text and wanting to go to the display page shows"
+      "Not inputting text and wanting to go to the display page shows"
       "an error and prevent from going to the display page.",
       (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
