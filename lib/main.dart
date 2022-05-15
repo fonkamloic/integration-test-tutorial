@@ -20,7 +20,7 @@ class TypingPage extends StatefulWidget {
 }
 
 class _TypingPageState extends State<TypingPage> {
-  TextEditingController _controller;
+   TextEditingController _controller;
   final GlobalKey<FormState> _formKey = GlobalKey();
 
   @override
@@ -53,8 +53,9 @@ class _TypingPageState extends State<TypingPage> {
                 border: OutlineInputBorder(),
                 labelText: 'Your Text',
               ),
-              validator: (value) =>
-                  value.isEmpty ? 'Input at least one character' : null,
+              validator: (String value) => value == null || value.trim() == ''
+                  ? 'Input at least one character'
+                  : null,
             ),
           ),
         ),
